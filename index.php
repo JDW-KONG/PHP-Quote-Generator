@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <?php 
 	include 'inc/functions.php'; 
-	$data = printQuote($quotes);
+	$data = getRandomQuote($quotes);
 ?>
 <html lang="en">
 <head>
@@ -15,7 +15,7 @@
   <div class="container">
     <div id="quote-box">
     <p class="quote"><?php echo $data['quote']; ?></p>
-    <p class="source"><?php echo $data['name']; ?></p>
+    <p class="source"><?php echo $data['source']; ?></p>
     </div>
     <button id="loadQuote" onclick="window.location.reload(true)" >Show another quote</button>
   </div>
