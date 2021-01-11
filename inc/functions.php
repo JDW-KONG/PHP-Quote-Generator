@@ -39,8 +39,6 @@ $quotes = array(
 // Create the getRandomQuote function and name it getRandomQuote
 function getRandomQuote($quote_list) {
 	$quote_number = rand(0, count($quote_list) - 1);
-	//var_dump($quote_number);
-	//echo $quote_number;
 	return $quote_number;
 }
 
@@ -48,15 +46,8 @@ function getRandomQuote($quote_list) {
 // Create the printQuote funtion and name it printQuote
 function printQuote($quote_list) {
 	$quote_number = getRandomQuote($quote_list);
-	$selected_author = $quote_list[$quote_number]['name'];
-	$selected_quote = $quote_list[$quote_number]['quote'];
-
 	$selection = $quote_list[$quote_number];
-
-	//echo $selected_author . " | " . $selected_quote . "\n";
 	return $selection;	
 }
-
-printQuote($quotes);
 
 ?>
