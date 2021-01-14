@@ -48,5 +48,11 @@ function getRandomQuote($quote_list) {
 }
 
 
-// I struggle to find a need for the printQuote function 
+function printQuote($quote_list) {
+	$quote = getRandomQuote($quote_list);
+	$html = '<p class="quote">' . $quote['quote'] . '</p><p class="source">' . $quote['source'] . '</p>';
+	echo $html;
+}
+
+
 ?>
